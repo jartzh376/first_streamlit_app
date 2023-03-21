@@ -5,7 +5,7 @@ import snowflake.connector
 streamlit.title('my parents new better menu')
 streamlit.header(' new menu')
 streamlit.text('cantaloupe')
-streamlit.header(' moms  menu')
+streamlit.header(' moms menu')
 
 
 #import pandas 
