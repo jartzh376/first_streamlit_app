@@ -34,9 +34,9 @@ def get_fruityvice_data(this_fruit_choice):
 streamlit.header(' Fruityvice Fruit Advice!')
 try:
    
-  fruit_choice = streamlit.text_input('what fruit would you like to add?')
-  #     if not fruit_choice:
-#        streamlit.error("Please enter a fruit to get information")
-#     else:
-#        back_from_function = get_fruityvice_data(fruit_choice)  
-#       streamlit.dataframe(back_from_function)
+  fruit_choice = streamlit.text_input('what fruit would you like information?')
+  if not fruit_choice:
+         streamlit.error("Please enter a fruit to get information")
+  else:
+        back_from_function = get_fruityvice_data(fruit_choice)  
+        streamlit.dataframe(back_from_function)
