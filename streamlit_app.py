@@ -48,9 +48,9 @@ try:
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 #streamlit.text(fruityvice_response)
 
-streamlit.header('Fruityvice Fruit Advice2')
+#streamlit.header('Fruityvice Fruit Advice2')
 #import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "cantaloupe")
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "cantaloupe")
 # delete this line       streamlit.text(fruityvice_response.json())
 
 
