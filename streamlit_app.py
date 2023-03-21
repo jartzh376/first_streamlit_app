@@ -57,14 +57,14 @@ try:
 #take the json version of the reponse and normalize it
  
 #output it the screen as a table
-streamlit.dataframe(fruityvice_normalized)
+#streamlit.dataframe(fruityvice_normalized)
 #new section to display fruityvice api response
-streamlit.header('Fruityvice Fruit Advice !')
-fruit_choice = streamlit.text_input('what fruit would you like information about?')
-streamlit.write('the user entered', fruit_choice)
-fruityvice_repsonse = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-streamlit.dataframe(fruityvice_normalized)
+#streamlit.header('Fruityvice Fruit Advice !')
+#fruit_choice = streamlit.text_input('what fruit would you like information about?')
+#streamlit.write('the user entered', fruit_choice)
+#fruityvice_repsonse = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+#fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+#streamlit.dataframe(fruityvice_normalized)
 #import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
