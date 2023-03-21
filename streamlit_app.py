@@ -32,8 +32,8 @@ def get_fruityvice_data(this_fruit_choice):
     return fruityvice_nomralized
 #new section to display fruityvice api response  
 streamlit.header(' Fruityvice Fruit Advice!')
-try:
-    fruit_choice = streamlit.text_input("What fruite would you like information about ?")
+#try:
+#    fruit_choice = streamlit.text_input("What fruite would you like information about ?")
   #     if not fruit_choice:
 #        streamlit.error("Please enter a fruit to get information")
 #     else:
