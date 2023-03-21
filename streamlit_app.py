@@ -1,7 +1,7 @@
 import streamlit
 streamlit.title('my parents new better menu')
 streamlit.header(' new menu')
-streamlit.text('eggs')
+streamlit.text('bacon')
 streamlit.header(' moms  menu')
 
 
@@ -28,7 +28,7 @@ streamlit.text(fruityvice_response)
 
 streamlit.header('Fruityvice Fruit Advice2')
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "cantelope")
 # delete this line       streamlit.text(fruityvice_response.json())
 
 
@@ -76,7 +76,7 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("the fruit load list contains")
 streamlit.dataframe(my_data_rows)
 
-fruit_choice = streamlit.text_input('what fruit would you like to add?', 'jackfruit')
+fruit_choice = streamlit.text_input('what fruit would you like to add?', 'cantelope')
 streamlit.write('Thanks for entering ', fruit_choice)
 
 my_cur.execute("insert into fruit_load_list values ('from streamlit')")
