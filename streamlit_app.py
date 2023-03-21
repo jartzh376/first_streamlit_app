@@ -33,7 +33,6 @@ def get_fruityvice_data(this_fruit_choice):
 #new section to display fruityvice api response  
 streamlit.header(' Fruityvice Fruit Advice!')
 try:
-   
   fruit_choice = streamlit.text_input('what fruit would you like information?')
   if not fruit_choice:
       streamlit.error('please enter a fruite to get information')
