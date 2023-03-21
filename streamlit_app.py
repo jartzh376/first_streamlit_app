@@ -1,11 +1,14 @@
 import streamlit
+import pandas
+import requests
+import snowflake.connector
 streamlit.title('my parents new better menu')
 streamlit.header(' new menu')
 streamlit.text('cantaloupe')
 streamlit.header(' moms  menu')
 
 
-import pandas
+#import pandas
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 #streamlit.dataframe(my_fruit_list)
 my_fruit_list = my_fruit_list.set_index('Fruit')
@@ -22,12 +25,12 @@ streamlit.dataframe(my_fruit_list)
    
   
   #new section to display fruityvice api response
-import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
+#import requests
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+#streamlit.text(fruityvice_response)
 
 streamlit.header('Fruityvice Fruit Advice2')
-import requests
+#import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "cantaloupe")
 # delete this line       streamlit.text(fruityvice_response.json())
 
@@ -41,10 +44,10 @@ streamlit.header('Fruityvice Fruit Advice !')
 fruit_choice = streamlit.text_input('what fruit would you like information about?', 'Kiwi')
 streamlit.write('the user entered', fruit_choice)
 
-import requests
-fruityvice_repsonse = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+#import requests
+#fruityvice_repsonse = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
-import snowflake.connector
+#import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
@@ -83,7 +86,7 @@ my_cur.execute("insert into fruit_load_list values ('from streamlit')")
 
 # dont run anything past here while we troubleshoot
 streamlit.stop()
-import snowflake.connector
+#import snowflake.connector
 my_cnx=snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * from fruit_load_list")
