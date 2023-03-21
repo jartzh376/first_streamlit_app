@@ -44,37 +44,8 @@ try:
    
    
    
-  #import requests
-#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-#streamlit.text(fruityvice_response)
-
-#streamlit.header('Fruityvice Fruit Advice2')
-#import requests
-#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "cantaloupe")
-# delete this line       streamlit.text(fruityvice_response.json())
-
-
-#take the json version of the reponse and normalize it
- 
-#output it the screen as a table
-#streamlit.dataframe(fruityvice_normalized)
-#new section to display fruityvice api response
-#streamlit.header('Fruityvice Fruit Advice !')
-#fruit_choice = streamlit.text_input('what fruit would you like information about?')
-#streamlit.write('the user entered', fruit_choice)
-#fruityvice_repsonse = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-#fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-#streamlit.dataframe(fruityvice_normalized)
-#import snowflake.connector
 
 
 
-# dont run anything past here while we troubleshoot
-streamlit.stop()
-#import snowflake.connector
-my_cnx=snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-my_cur.execute("select * from fruit_load_list")
-my_data_rows = my_cur.fetchall()
-streamlit.header("the fruit load list contains:")
-streamlit.datafram(my_data_rows)
+
+
